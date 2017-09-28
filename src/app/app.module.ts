@@ -9,10 +9,14 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { StoreModule, ActionReducer, combineReducers } from '@ngrx/store';
 import { EffectsModule } from "@ngrx/effects";
 import { StoreRouterConnectingModule } from "@ngrx/router-store";
+import { TodosComponent } from './todos/todos.component';
+import { TodoComponent } from './todo/todo.component';
 
+ 
 @NgModule({
   declarations: [
-  AppComponent,
+  AppComponent, 
+  TodosComponent, TodoComponent,
   ],
   imports: [
   BrowserModule,
@@ -21,7 +25,7 @@ import { StoreRouterConnectingModule } from "@ngrx/router-store";
   NoopAnimationsModule,
   RouterModule.forRoot([
  
-      // { path: 'talk/:id', component: TalkDetailsComponent }
+      { path: '', component: TodosComponent }
       ], {useHash: true})
   ],
   bootstrap: [AppComponent]
