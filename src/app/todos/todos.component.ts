@@ -9,7 +9,7 @@ import { Component, OnInit , ChangeDetectionStrategy , Input } from '@angular/co
 export class TodosComponent implements OnInit {
 	@Input() todos;
   constructor() { 
-  	// this.todos = [{title:"test1"},{title : "test2"}];
+  	
   }
 
   ngOnInit() {
