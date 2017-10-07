@@ -57,7 +57,11 @@ const initialState = {
 }
 
 export function todos (state = initialState , {type , payload}) {
+  console.log(type);
+  console.log(payload);
   switch (type) {
+
+
 
     case GET_TODOS:
     return Object.assign({} ,state , {pending:true,error:null})
@@ -67,8 +71,32 @@ export function todos (state = initialState , {type , payload}) {
 
     case GET_TODOS_ERROR:
     return Object.assign({} ,state , {pending:true,error:"Error"})
+
+    case ADD_TODO:
+    return Object.assign({} ,state , {pending:true,error:null})
+
+    case ADD_TODO_SUCCESS:
+    console.log(Object.assign({}, state, {
+      data: [...state.data, payload ]
+      }));
+    
+    return Object.assign({}, state, {
+      data: [...state.data,payload  ]
+      });
+
     default:
     return state; 
 
   }
+
+
+
+}
+
+export const ADD_TODO = "ADD_TODO";
+export const ADD_TODO_SUCCESS = "ADD_TODO_SUCCESS";
+export const ADD_TODO_ERROR = "ADD_TODO_ERROR";
+
+export function addTodo( title ) {
+  return { type: ADD_TODO,  payload : title }
 }

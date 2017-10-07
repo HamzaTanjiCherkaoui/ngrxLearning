@@ -1,5 +1,8 @@
 <div class="container">
+
 	<h1> Todo App </h1>
+	<hr>
+	<add-todo (add)="addTodo($event)" [reset]="addTodoSuccess$ | async"></add-todo>
 	<hr>
 	<todos [todos] ="todos | async" ></todos>
 </div>
