@@ -13,6 +13,7 @@ export class TodosComponent implements OnInit {
   }
 
   ngOnInit() {
+    console.log(this.todos);
   }
 
 }

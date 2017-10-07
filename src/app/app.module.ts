@@ -11,23 +11,27 @@ import { EffectsModule } from "@ngrx/effects";
 import { StoreRouterConnectingModule } from "@ngrx/router-store";
 import { TodosComponent } from './todos/todos.component';
 import { TodoComponent } from './todo/todo.component';
+import { TodosEffects} from './todos.effects';
+import {TodoService } from './todo.service';
+import { AddTodoComponent } from './add-todo/add-todo.component';
 
- 
 @NgModule({
   declarations: [
   AppComponent, 
-  TodosComponent, TodoComponent,
+  TodosComponent, TodoComponent, AddTodoComponent,
   ],
+  providers : [TodoService],
   imports: [
   BrowserModule,
   ReactiveFormsModule,
   HttpModule,
   NoopAnimationsModule,
-   StoreModule.forRoot({todos}),
+  StoreModule.forRoot({todos}),
+  EffectsModule.forRoot([TodosEffects]),
   RouterModule.forRoot([
- 
-      { path: '', component: TodosComponent }
-      ], {useHash: true})
+
+    { path: '', component: AppComponent }
+    ], {useHash: true})
   ],
   bootstrap: [AppComponent]
   })
@@ -46,23 +50,23 @@ export function getTodos() {
     type : GET_TODOS
   }
 }
- const initialState = {
+const initialState = {
   data : [], 
-   pending : false,
-   error : null
+  pending : false,
+  error : null
 }
 
 export function todos (state = initialState , {type , payload}) {
   switch (type) {
 
     case GET_TODOS:
-      return Object.assign({} ,state , {pending:true,error:null})
+    return Object.assign({} ,state , {pending:true,error:null})
 
     case GET_TODOS_SUCCESS:
-      return Object.assign({} ,state , {data:payload,error:false})
+    return Object.assign({} ,state , {data:payload,pending:false,error:false})
 
     case GET_TODOS_ERROR:
-      return Object.assign({} ,state , {pending:true,error:"Error"})
+    return Object.assign({} ,state , {pending:true,error:"Error"})
     default:
     return state; 
 
