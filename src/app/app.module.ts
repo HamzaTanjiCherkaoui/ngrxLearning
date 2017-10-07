@@ -78,10 +78,11 @@ export function todos (state = initialState , {type , payload}) {
     case ADD_TODO_SUCCESS:
     console.log(Object.assign({}, state, {
       data: [...state.data, payload ]
-      }));
+      , pending : false}));
     
     return Object.assign({}, state, {
-      data: [...state.data,payload  ]
+      data: [...state.data,payload  ],
+       pending : false
       });
 
     default:
