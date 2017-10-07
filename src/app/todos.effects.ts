@@ -1,7 +1,7 @@
 import { Injectable } from "@angular/core";
 import { Actions, Effect } from "@ngrx/effects";
 import { Observable } from "rxjs";
-import { GET_TODOS , GET_TODOS_SUCCESS , GET_TODOS_ERROR , ADD_TODO,ADD_TODO_SUCCESS,ADD_TODO_ERROR} from "./app.module";
+import { GET_TODOS , GET_TODOS_SUCCESS , GET_TODOS_ERROR , ADD_TODO,ADD_TODO_SUCCESS,ADD_TODO_ERROR} from "./store";
 import { TodoService } from "./todo.service";
 
 @Injectable()

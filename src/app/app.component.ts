@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {getTodos , ADD_TODO_SUCCESS , addTodo } from "./app.module";
+import {getTodos , ADD_TODO_SUCCESS , addTodo } from "./store";
 import { Store } from "@ngrx/store";
 import { Observable } from "rxjs";
 import {  TodosEffects } from './todos.effects';
