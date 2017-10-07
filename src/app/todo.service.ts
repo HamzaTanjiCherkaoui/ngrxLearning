@@ -15,10 +15,13 @@ export class TodoService {
 	}
 
 	addTodo( data ) {
-		console.log(data.payload);
+		
 		let title = data.payload;
 		return Observable.timer(2000)
 		.mapTo({id: Math.random(), title , completed: false})
 	}
 
+	removeTodo(id) {
+		
+	}
 }

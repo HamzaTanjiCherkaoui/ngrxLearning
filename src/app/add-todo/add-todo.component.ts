@@ -14,7 +14,9 @@ export class AddTodoComponent implements OnInit {
 
 	@Input()
 	public set reset( action ) {
-		action && this.control.reset();
+
+		
+		 this.control.reset();
 	}
 	constructor() { }
 

@@ -1,6 +1,6 @@
 <div class="form-inline" >
 	<div class="form-group">
-		<input type="text" placeholder="Add todo.." class="form-control" [formControl]="control">
+		<input type="text" placeholder="Add todo.." class="form-control" [formControl]="control"  (keyup.enter)="add.next(control.value)" >
 	</div>
 	<button class="btn btn-primary" (click)="add.next(control.value)">Add</button>
 </div>

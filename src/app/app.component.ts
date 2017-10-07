@@ -14,6 +14,7 @@ export class AppComponent {
   todos  :Observable<any>;
   addTodoSuccess$ : Observable<any>;
   constructor ( private store : Store<any> , private todosEffects : TodosEffects) {
+    
   	this.store.dispatch(getTodos());
   	this.todos = store.select("todos");
     this.addTodoSuccess$ = this.todosEffects.addTodo$.filter(( { type } ) => type === ADD_TODO_SUCCESS);
