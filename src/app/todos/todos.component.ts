@@ -1,4 +1,4 @@
-import { Component, OnInit , ChangeDetectionStrategy , Input } from '@angular/core';
+import { Component, OnInit , ChangeDetectionStrategy , Input , Output  , EventEmitter} from '@angular/core';
 
 @Component({
   selector: 'todos',
@@ -7,13 +7,16 @@ import { Component, OnInit , ChangeDetectionStrategy , Input } from '@angular/co
   changeDetection : ChangeDetectionStrategy.OnPush
 })
 export class TodosComponent implements OnInit {
-	@Input() todos;
+	
+  @Input() todos;
+  @Output() changeTodoState = new EventEmitter<any>();
+
   constructor() { 
-  	
   }
 
-  ngOnInit() {
-    console.log(this.todos);
-  }
+  ngOnInit() { }
 
+  ToggleTodo(newState,id) {  
+    this.changeTodoState.next({ newState , id });
+  }
 }

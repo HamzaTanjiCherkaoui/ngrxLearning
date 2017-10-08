@@ -12,5 +12,5 @@
 	</div>
 	
 	<hr>
-	<todos [todos] ="todos | async" ></todos>
+	<todos [todos] ="todos | async" (changeTodoState)="changeTodoState($event)"></todos>
 </div>

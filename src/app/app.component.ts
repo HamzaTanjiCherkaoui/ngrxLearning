@@ -41,4 +41,10 @@ export class AppComponent {
     this.store.dispatch(getTodos());
   }
 
+  changeTodoState(todoToChange) {
+
+    console.log(todoToChange);
+    
+  }
+
 }
