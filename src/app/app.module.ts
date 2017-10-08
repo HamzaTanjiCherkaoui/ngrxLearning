@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { todos ,addTodo} from './store';
+import { todos ,addTodo , visibilityFilter} from './store';
 import { AppComponent } from './app.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
@@ -28,7 +28,7 @@ import { FilterTodosComponent } from './filter-todos/filter-todos.component';
   ReactiveFormsModule,
   HttpModule,
   NoopAnimationsModule,
-  StoreModule.forRoot({todos , addTodo}),
+  StoreModule.forRoot({todos , addTodo , visibilityFilter}),
   EffectsModule.forRoot([TodosEffects]),
 
   RouterModule.forRoot([

@@ -2,9 +2,13 @@
 export const GET_TODOS  = "GET_TODOS";
 export const GET_TODOS_SUCCESS = "GET_TODOS_SUCCESS";
 export const GET_TODOS_ERROR = "GET_TODOS_ERROR";
+
 export const ADD_TODO = "ADD_TODO";
 export const ADD_TODO_SUCCESS = "ADD_TODO_SUCCESS";
 export const ADD_TODO_ERROR = "ADD_TODO_ERROR";
+
+export const SET_VISIBILITY_FILTER = "SET_VISIBILITY_FILTER";
+
 
 export function getTodos() { 
   return {
@@ -18,7 +22,7 @@ const initialState = {
 }
 
 export function todos (state = initialState , {type , payload}) {
-  
+
   switch (type) {
 
     case GET_TODOS:
@@ -37,7 +41,7 @@ export function todos (state = initialState , {type , payload}) {
 
     return Object.assign({}, state, {
       data: [...state.data,payload  ],
-       pending : false
+      pending : false
       });
 
     default:
@@ -49,4 +53,20 @@ export function todos (state = initialState , {type , payload}) {
 export function addTodo( title ) {
 
   return { type: ADD_TODO,  payload : title }
+}
+
+export function setVisibilityFilter( filter ) {
+  return {
+    type: SET_VISIBILITY_FILTER,
+    payload: filter
+  }
+}
+
+export const visibilityFilter = ( state = "SHOW_ALL", action ) => {
+  switch( action.type ) {
+    case SET_VISIBILITY_FILTER:
+    return action.payload;
+    default:
+    return state;
+  }
 }
