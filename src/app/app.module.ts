@@ -15,11 +15,12 @@ import { TodoComponent } from './todo/todo.component';
 import { TodosEffects} from './todos.effects';
 import {TodoService } from './todo.service';
 import { AddTodoComponent } from './add-todo/add-todo.component';
+import { FilterTodosComponent } from './filter-todos/filter-todos.component';
 
 @NgModule({
   declarations: [
   AppComponent, 
-  TodosComponent, TodoComponent, AddTodoComponent,
+  TodosComponent, TodoComponent, AddTodoComponent, FilterTodosComponent,
   ],
   providers : [TodoService],
   imports: [
