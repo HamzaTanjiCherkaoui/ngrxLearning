@@ -10,7 +10,7 @@ export class TodoService {
 		return Observable.timer(2000)
 		.mapTo ([
 			{id:1,title : "Learn ngrx/store" , completed : false},
-			{id:2,title : "Learn ngrx/effects" , completed : false}
+			{id:2,title : "Learn ngrx/effects" , completed : true}
 			])
 	}
 
