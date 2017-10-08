@@ -4,8 +4,8 @@
 	<p  [ngClass]="{'crossed': todo.completed }">{{todo.title}}</p>
 	</div>
 	<div class="col-md-2">
-		<button class="btn btn-success clearfix" *ngIf="!todo.completed" (click)= "Toggle.next(!todo.completed)">Complete</button>
-		<button class="btn btn-danger clearfix" *ngIf="todo.completed" (click)= "Toggle.next(!todo.completed)">Archive</button>
+		<button class="btn btn-success clearfix" *ngIf="!todo.completed" (click)= "Toggle.next(todo)">Complete</button>
+		<button class="btn btn-danger clearfix" *ngIf="todo.completed" (click)= "Toggle.next(todo)">re-open</button>
 	</div>
 	</div>
 </div>

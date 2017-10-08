@@ -44,4 +44,14 @@ export class TodoService {
 						return todos.filter(t => !t.completed);
 					}
 				}
+
+				toggleTodo(data) {
+
+					console.log(data.payload);
+
+					return  Observable.timer(1000)
+					.mapTo(data.payload);
+
+				}
 			}
+

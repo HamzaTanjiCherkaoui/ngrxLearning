@@ -9,6 +9,8 @@ export const ADD_TODO_ERROR = "ADD_TODO_ERROR";
 
 export const SET_VISIBILITY_FILTER = "SET_VISIBILITY_FILTER";
 
+export const TOGGLE_TODO_STATE = "TOGGLE_TODO_STATE";
+export const TOGGLE_TODO_STATE_SUCCESS = "TOGGLE_TODO_STATE_SUCCESS";
 
 export function getTodos() { 
   return {
@@ -44,6 +46,20 @@ export function todos (state = initialState , {type , payload}) {
       pending : false
       });
 
+    case TOGGLE_TODO_STATE:
+    return Object.assign({} ,state , {pending:true,error:null})
+
+    case TOGGLE_TODO_STATE_SUCCESS:
+    return Object.assign({} ,state , {
+      data : state.data
+      .map(todo =>{
+        if(todo.id == payload.id)
+          return Object.assign ( {} , todo , { completed : !todo.completed});
+        return todo;
+      })
+       , pending:false,error:null})
+
+
     default:
     return state; 
 
@@ -53,6 +69,11 @@ export function todos (state = initialState , {type , payload}) {
 export function addTodo( title ) {
 
   return { type: ADD_TODO,  payload : title }
+}
+
+export function toggleTodo( changedTodo ) {
+
+  return { type: TOGGLE_TODO_STATE,  payload : changedTodo }
 }
 
 export function setVisibilityFilter( filter ) {
