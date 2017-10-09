@@ -1,3 +1,10 @@
-<p *ngIf="todos.pending"> Loading ... </p>
-<todo [todo] = "todo" *ngFor=" let todo of todos.data" (Toggle)="changeTodoState.next($event)"></todo>
-<p *ngIf="todos.error">{{todos.error}}</p>
+
+	<div *ngIf="todos.pending" data-loading class="bx--loading bx--loading--small center-block">
+		<svg class=" bx--loading__svg " viewBox="-75 -75 150 150 ">
+			<title>Loading</title>
+			<circle cx="0 " cy="0 " r="37.5 " />
+		</svg>
+	</div> 
+
+	<todo [todo] = "todo" *ngFor=" let todo of todos.data" (Toggle)="changeTodoState.next($event)"></todo>
+	<p *ngIf="todos.error">{{todos.error}}</p>

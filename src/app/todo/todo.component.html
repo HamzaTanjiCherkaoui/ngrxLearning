@@ -1,12 +1,14 @@
 <div class="row">
-	<div class="well col-lg-offset-3  col-md-6 clearfix" >
+	<br>
+	<div class="bx--tile col-md-8 col-lg-offset-2 clearfix" >
 	<div class=" col-md-10">
 	<p  [ngClass]="{'crossed': todo.completed }">{{todo.title}}</p>
 	</div>
 	<div class="col-md-2">
 
 		<button class="bx--btn bx--btn--primary" type="button" *ngIf="!todo.completed" (click)= "Toggle.next(todo)">Complete</button>
-		<button class="bx--btn bx--btn--primary" type="button" *ngIf="todo.completed" (click)= "Toggle.next(todo)">re-open</button>
+		<button class="bx--btn bx--btn--secondary" type="button" *ngIf="todo.completed" (click)= "Toggle.next(todo)">re-open</button>
 	</div>
 	</div>
+	<br>
 </div>
