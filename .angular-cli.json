@@ -23,6 +23,7 @@
         "styles.css"
       ],
       "scripts": [],
+      "styles" : ["../node_modules/carbon-components/css/carbon-components.min.css"],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",

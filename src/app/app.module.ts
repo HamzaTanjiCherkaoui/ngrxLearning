@@ -9,7 +9,8 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from "@ngrx/effects";
 import { StoreRouterConnectingModule } from "@ngrx/router-store";
-
+import { Modal } from 'carbon-components'
+Modal.init();
 import { TodosComponent } from './todos/todos.component';
 import { TodoComponent } from './todo/todo.component';
 import { TodosEffects} from './todos.effects';

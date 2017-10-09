@@ -26,6 +26,7 @@
     "@ngrx/router-store": "github:ngrx/router-store-builds",
     "@ngrx/store": "github:ngrx/store-builds",
     "@ngrx/store-devtools": "^4.0.0",
+    "carbon-components": "^7.23.2",
     "core-js": "^2.4.1",
     "rxjs": "^5.1.0",
     "zone.js": "^0.8.4"

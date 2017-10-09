@@ -1,6 +1,10 @@
-<div class="form-inline" >
-	<div class="form-group">
-		<input type="text" placeholder="Add todo.." class="form-control" [formControl]="control"  (keyup.enter)="add.next(control.value)" >
-	</div>
-	<button class="btn btn-primary" (click)="add.next(control.value)">Add</button>
+<div class=" bx--col-md-3">
+<label for="select-id" class="bx--label">add Todo</label>
 </div>
+<div class="bx--form-item bx--col-md-3">
+	<input type="text" placeholder="Add todo.."  class="bx--text-input add-input" [formControl]="control"  (keyup.enter)="add.next(control.value)" >
+	<button class="bx--btn bx--btn--primary add-btn " type="button"(click)="add.next(control.value)">Add</button>
+</div>
+
+
+

@@ -1,16 +1,19 @@
-<div class="container">
-
-	<h1> Todo App </h1>
-	<hr>
-	<div class="row">
-		<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-			<add-todo (add)="addTodo($event)" [reset]="addTodoSuccess$ | async"></add-todo>		
-		</div>
-		<div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
-			<filter-todos [filters]="filters"  [active]="activeFilter | async" (changeFilter)="changeFilter($event)"></filter-todos>		
+<div class="bx--grid">
+	<div class="bx--row">
+		<div class="bx--col-xs-11 ">
+			<h1 class="text-center"> Todo App </h1>
+			<br>
+			<div class="bx--grid bx--tile">
+				<div class="bx--row layer bx--col-xs-9">
+					<div class="bx--col-xs-6">
+						<add-todo (add)="addTodo($event)" [reset]="addTodoSuccess$ | async"></add-todo>		
+					</div>
+					<div class="bx--col-xs-6">
+						<filter-todos [filters]="filters"  [active]="activeFilter | async" (changeFilter)="changeFilter($event)"></filter-todos>		
+					</div>
+				</div>
+			</div>
+			<todos [todos] ="todos | async" (changeTodoState)="changeTodoState($event)"></todos>
 		</div>
 	</div>
-	
-	<hr>
-	<todos [todos] ="todos | async" (changeTodoState)="changeTodoState($event)"></todos>
 </div>

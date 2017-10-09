@@ -1,8 +1,13 @@
 <div class="col-md-12" >
-	<label class="col-md-2">filter : </label>
-	<div class="form-group  col-md-10">
-		<select class="form-control " [formControl]="filter" (change)="changeFilter.next(filter.value)">
-			<option *ngFor="let filter of filters" [ngValue]="filter.id" >{{filter.title}}</option>
-		</select>
+	<div class="bx--form-item">
+		<label for="select-id" class="bx--label">filter</label>
+		<div class="bx--select">
+			<select id="select-id" class="bx--select-input" [formControl]="filter" (change)="changeFilter.next(filter.value)">
+				<option class="bx--select-option" *ngFor="let filter of filters" [ngValue]="filter.id" >{{filter.title}}</option>
+			</select>
+			<svg class="bx--select__arrow" width="10" height="5" viewBox="0 0 10 5" fill-rule="evenodd">
+				<path d="M10 0L5 5 0 0z"></path>
+			</svg>
+		</div>
 	</div>
 </div>
