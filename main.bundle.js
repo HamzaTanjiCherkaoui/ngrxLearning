@@ -16,12 +16,12 @@ webpackEmptyContext.id = "../../../../../src async recursive";
 /***/ "../../../../../src/app/add-todo/add-todo.component.css":
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(true);
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
 // imports
 
 
 // module
-exports.push([module.i, ".add-input {\r\n\twidth: 60%;\r\n\tfloat: left;\r\n}\r\n\r\n.add-btn {\r\n\tfloat: left;\r\n\twidth: 40%;\r\n}", "", {"version":3,"sources":["C:/Users/hamza.cherkaoui/Desktop/playGround/ngrxLearning/src/app/add-todo/add-todo.component.css"],"names":[],"mappings":"AAAA;CACC,WAAW;CACX,YAAY;CACZ;;AAED;CACC,YAAY;CACZ,WAAW;CACX","file":"add-todo.component.css","sourcesContent":[".add-input {\r\n\twidth: 60%;\r\n\tfloat: left;\r\n}\r\n\r\n.add-btn {\r\n\tfloat: left;\r\n\twidth: 40%;\r\n}"],"sourceRoot":""}]);
+exports.push([module.i, ".add-input {\r\n\twidth: 60%;\r\n\tfloat: left;\r\n}\r\n\r\n.add-btn {\r\n\tfloat: left;\r\n\twidth: 40%;\r\n}", ""]);
 
 // exports
 
@@ -98,12 +98,12 @@ AddTodoComponent = __decorate([
 /***/ "../../../../../src/app/app.component.css":
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(true);
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
 // imports
 
 
 // module
-exports.push([module.i, ":host {\r\n  display: -webkit-box;\r\n  display: -ms-flexbox;\r\n  display: flex;\r\n  -webkit-box-orient: vertical;\r\n  -webkit-box-direction: normal;\r\n      -ms-flex-direction: column;\r\n          flex-direction: column;\r\n}\r\n.box {\r\n\tbackground-color: #fff; \r\n\tpadding: 20px;\r\n}", "", {"version":3,"sources":["C:/Users/hamza.cherkaoui/Desktop/playGround/ngrxLearning/src/app/app.component.css"],"names":[],"mappings":"AAAA;EACE,qBAAc;EAAd,qBAAc;EAAd,cAAc;EACd,6BAAuB;EAAvB,8BAAuB;MAAvB,2BAAuB;UAAvB,uBAAuB;CACxB;AACD;CACC,uBAAuB;CACvB,cAAc;CACd","file":"app.component.css","sourcesContent":[":host {\r\n  display: flex;\r\n  flex-direction: column;\r\n}\r\n.box {\r\n\tbackground-color: #fff; \r\n\tpadding: 20px;\r\n}"],"sourceRoot":""}]);
+exports.push([module.i, ":host {\r\n  display: -webkit-box;\r\n  display: -ms-flexbox;\r\n  display: flex;\r\n  -webkit-box-orient: vertical;\r\n  -webkit-box-direction: normal;\r\n      -ms-flex-direction: column;\r\n          flex-direction: column;\r\n}\r\n.box {\r\n\tbackground-color: #fff; \r\n\tpadding: 20px;\r\n}", ""]);
 
 // exports
 
@@ -264,12 +264,12 @@ AppModule = __decorate([
 /***/ "../../../../../src/app/filter-todos/filter-todos.component.css":
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(true);
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
 // imports
 
 
 // module
-exports.push([module.i, "", "", {"version":3,"sources":[],"names":[],"mappings":"","file":"filter-todos.component.css","sourceRoot":""}]);
+exports.push([module.i, "", ""]);
 
 // exports
 
@@ -520,12 +520,12 @@ TodoService = __decorate([
 /***/ "../../../../../src/app/todo/todo.component.css":
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(true);
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
 // imports
 
 
 // module
-exports.push([module.i, ".crossed {\r\n\ttext-decoration: line-through;\r\n}", "", {"version":3,"sources":["C:/Users/hamza.cherkaoui/Desktop/playGround/ngrxLearning/src/app/todo/todo.component.css"],"names":[],"mappings":"AAAA;CACC,8BAA8B;CAC9B","file":"todo.component.css","sourcesContent":[".crossed {\r\n\ttext-decoration: line-through;\r\n}"],"sourceRoot":""}]);
+exports.push([module.i, ".crossed {\r\n\ttext-decoration: line-through;\r\n}", ""]);
 
 // exports
 
@@ -677,12 +677,12 @@ var _a, _b, _c;
 /***/ "../../../../../src/app/todos/todos.component.css":
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(true);
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
 // imports
 
 
 // module
-exports.push([module.i, "", "", {"version":3,"sources":[],"names":[],"mappings":"","file":"todos.component.css","sourceRoot":""}]);
+exports.push([module.i, "", ""]);
 
 // exports
 
